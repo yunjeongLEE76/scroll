@@ -10,19 +10,39 @@
           150deg,
           green,
           yellowgreen,
-          rgb(41, 136, 253)
+          rgb(41, 136, 253),
+          rgb(26, 8, 73),
+          rgb(34, 9, 48)
         );
+        overflow-x: hidden;
       }
       h1 {
         position: fixed;
-        bottom: 5%;
-        left: 3%;
-        font-size: 50px;
+        bottom: 40px;
+        font-size: 30px;
         color: #fff4ba;
+        text-align: center;
+        width: 100%;
       }
       .innerWrap {
+        padding: 40px;
+      }
+      .title {
         width: 100%;
-        height: 5000px;
+        text-align: center;
+        font-size: 40px;
+        margin-top: 70px;
+      }
+      .textWrap {
+        padding: 500px 0px;
+      }
+      .textWrap p {
+        color: white;
+        font-size: 30px;
+        text-align: center;
+      }
+      .textWrap img {
+        width: 100%;
       }
       .progressWrap {
         position: fixed;
@@ -47,8 +67,26 @@
     <div class="progressWrap">
       <div class="bar"></div>
     </div>
-    <h1>0%</h1>
-    <div class="innerWrap"></div>
+    <h1>0m</h1>
+    <div class="innerWrap">
+      <h2 class="title">깊은 바다</h2>
+      <div class="textWrap">
+        <p>대게</p>
+        <img src="./images/crab.png" />
+      </div>
+      <div class="textWrap">
+        <p>오징어</p>
+        <img src="./images/cuttle.png" />
+      </div>
+      <div class="textWrap">
+        <p>방어</p>
+        <img src="./images/fish_01.png" />
+      </div>
+      <div class="textWrap">
+        <p>미역</p>
+        <img src="./images/seaweed.png" />
+      </div>
+    </div>
   </body>
   <script>
     const h1 = document.querySelector("h1");
@@ -63,7 +101,7 @@
       documentHeight = document.body.scrollHeight - window.innerHeight;
       per = `${percent(scrollNum, documentHeight)}%`;
 
-      h1.innerText = per;
+      h1.innerText = `${scrollNum.toFixed(0)} METERS DEEP`;
       // 외우는게 편함..
       progressBar.style.width = per;
     });
