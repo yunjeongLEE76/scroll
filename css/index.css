@@ -1,0 +1,88 @@
+body {
+  background: linear-gradient(
+    150deg,
+    rgb(192, 189, 26),
+    rgb(66, 155, 46),
+    rgb(41, 136, 253),
+    rgb(26, 8, 73),
+    rgb(34, 9, 48)
+  );
+  overflow-x: hidden;
+  /* 하단에 스크롤을 없애기 위해 */
+  padding: 0;
+  margin: 0;
+  /* css 초기화 */
+}
+.deptWrap {
+  position: fixed;
+  bottom: 50px;
+  font-size: 30px;
+  color: #fff4ba;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  border-bottom: 2px dashed white;
+  padding-bottom: 10px;
+  z-index: 120;
+}
+.deptWrap span {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+}
+.innerWrap {
+  position: relative;
+  padding: 40px;
+  z-index: 100;
+}
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 70px;
+}
+.textWrap {
+  padding: 500px 0px;
+}
+.textWrap p {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+.textWrap img {
+  width: 100%;
+}
+.progressWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+}
+.bar {
+  width: 0%;
+  height: inherit;
+  /* 위의 속성을 따라간다는 속성 */
+  position: absolute;
+  z-index: 100;
+  background-color: rgb(36, 78, 43);
+  transition: width 0.3s ease-out;
+}
+
+.submarine {
+  position: fixed;
+  width: 200px;
+  top: 17%;
+  transition: all 0.3s ease-out;
+  z-index: 150;
+}
+.octopus {
+  position: fixed;
+  z-index: 1;
+  bottom: -150px;
+  right: 0;
+  width: 300px;
+  opacity: 0.4;
+  transition: all 1s ease-out;
+}
